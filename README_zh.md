@@ -15,6 +15,7 @@
 | [STM32F103RCT6](STM32F103RCT6_Template/README_zh.md) | Cortex-M3，72 MHz | HAL、CMSIS、Keil MDK | USART1 收发 |
 | [STM32F103ZET6](STM32F103ZET6_Template/README_zh.md) | Cortex-M3，72 MHz | HAL、CMSIS、Keil MDK | USART1 收发 |
 | [STM32F411CEU6](STM32F411CEU6_Template/README_zh.md) | Cortex-M4F，16 MHz HSI | HAL、CMSIS、Keil MDK | USART1 收发 |
+| [STM32F411CEU6 SPL](STM32F411CEU6_SPL_Template/README_zh.md) | Cortex-M4F，16 MHz HSI | SPL、CMSIS、Keil MDK | 已通过硬件验证的最小工程 |
 | [STM32F411CEU6 完整工程目录](STM32F411CEU6_EmbeddedProject_Folder_Template/README_zh.md) | Cortex-M4F，16 MHz HSI | HAL、CMSIS、Keil MDK | 基础固件及完整项目目录 |
 
 ## 开发环境

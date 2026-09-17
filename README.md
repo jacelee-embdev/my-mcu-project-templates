@@ -15,6 +15,7 @@ This repository collects embedded chip project templates used for everyday learn
 | [STM32F103RCT6](STM32F103RCT6_Template/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | USART1 communication |
 | [STM32F103ZET6](STM32F103ZET6_Template/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | USART1 communication |
 | [STM32F411CEU6](STM32F411CEU6_Template/README.md) | Cortex-M4F, 16 MHz HSI | HAL, CMSIS, Keil MDK | USART1 communication |
+| [STM32F411CEU6 SPL](STM32F411CEU6_SPL_Template/README.md) | Cortex-M4F, 16 MHz HSI | SPL, CMSIS, Keil MDK | Minimal project verified on hardware |
 | [STM32F411CEU6 Full Project Folder](STM32F411CEU6_EmbeddedProject_Folder_Template/README.md) | Cortex-M4F, 16 MHz HSI | HAL, CMSIS, Keil MDK | Base firmware and a complete project structure |
 
 ## Development Environments
