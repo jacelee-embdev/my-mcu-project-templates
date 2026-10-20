@@ -18,6 +18,7 @@
 | [STM32F411CEU6 HAL + RTT + EasyLogger](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger/README_zh.md) | Cortex-M4F，100 MHz（HSI + PLL） | HAL、CMSIS、SEGGER RTT、EasyLogger、Keil MDK | 裸机日志输出与 USART1 初始化 |
 | [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS/README_zh.md) | Cortex-M4F，100 MHz（HSI + PLL） | HAL、CMSIS、SEGGER RTT、EasyLogger、FreeRTOS、Keil MDK | 统一任务创建、PC13 状态灯、日志与 USART1 初始化 |
 | [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS + CmBacktrace](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS_CmBacktrace/README_zh.md) | Cortex-M4F，100 MHz（HSI + PLL） | HAL、CMSIS、SEGGER RTT、EasyLogger、FreeRTOS、CmBacktrace、Keil MDK | RTOS 日志、USART1 初始化及 HardFault / 任务栈诊断 |
+| [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS + SystemView](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS_SystemView/README_zh.md) | Cortex-M4F，100 MHz（HSI + PLL） | HAL、CMSIS、SEGGER RTT、EasyLogger、FreeRTOS、SystemView、Keil MDK | SystemView 任务跟踪、RTT 日志、PC13 状态灯与 USART1 初始化 |
 | [STM32F411CEU6 SPL](STM32F411CEU6_SPL/README_zh.md) | Cortex-M4F，16 MHz HSI | SPL、CMSIS、Keil MDK | 已通过硬件验证的最小工程 |
 | [STM32F411CEU6 SPL + RTT + EasyLogger](STM32F411CEU6_SPL_SEGGER_RTT_EasyLogger/README_zh.md) | Cortex-M4F，16 MHz HSI | SPL、CMSIS、SEGGER RTT、EasyLogger、Keil MDK | 已通过硬件验证的 RTT 实时日志输出 |
 | [STM32F411CEU6 HAL 典型产品开发规范](STM32F411CEU6_HAL_Typical_Product_Development_Standard/README_zh.md) | Cortex-M4F，16 MHz HSI | HAL、CMSIS、Keil MDK | 基础固件及按典型产品开发规范组织的完整目录 |
@@ -37,7 +38,7 @@
 
 ## 目录约定
 
-STM32 目录按 `芯片_库[_SEGGER_RTT][_EasyLogger][_FreeRTOS][_CmBacktrace]` 命名，只列出实际集成的组件；没有 OS 后缀表示裸机工程。`Typical_Product_Development_Standard` 后缀表示按典型产品开发规范组织的完整目录版本。
+STM32 目录按 `芯片_库[_SEGGER_RTT][_EasyLogger][_FreeRTOS][_CmBacktrace][_SystemView]` 命名，只列出实际集成的组件；没有 OS 后缀表示裸机工程。`Typical_Product_Development_Standard` 后缀表示按典型产品开发规范组织的完整目录版本。
 
 STM32 常规模板使用 `Users`、`Drivers`、`Projects` 和 `Output` 组织代码。HAL + RTT 系列沿用 CubeMX 结构，使用 `Core`、`Drivers`、`MDK-ARM` 和 `Middlewares_User`；FreeRTOS 版本还包含 `Middlewares`、板级驱动目录 `Z01_BSP` 及业务任务目录 `Z02_Business`。完整目录模板另含项目管理、硬件、软件、结构、测试和工具等分类。ESP32-S3 工程遵循 ESP-IDF 结构，使用根目录 CMake 配置、`sdkconfig` 和 `main` 组件。新增其他平台时可沿用其官方或团队约定的目录结构，无需强制统一。
 

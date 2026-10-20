@@ -18,6 +18,7 @@ This repository collects embedded chip project templates used for everyday learn
 | [STM32F411CEU6 HAL + RTT + EasyLogger](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger/README.md) | Cortex-M4F, 100 MHz (HSI + PLL) | HAL, CMSIS, SEGGER RTT, EasyLogger, Keil MDK | Bare-metal logging and USART1 initialization |
 | [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS/README.md) | Cortex-M4F, 100 MHz (HSI + PLL) | HAL, CMSIS, SEGGER RTT, EasyLogger, FreeRTOS, Keil MDK | Centralized task creation, PC13 status LED, logging, and USART1 initialization |
 | [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS + CmBacktrace](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS_CmBacktrace/README.md) | Cortex-M4F, 100 MHz (HSI + PLL) | HAL, CMSIS, SEGGER RTT, EasyLogger, FreeRTOS, CmBacktrace, Keil MDK | RTOS logging, USART1 initialization, and HardFault / task stack diagnostics |
+| [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS + SystemView](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS_SystemView/README.md) | Cortex-M4F, 100 MHz (HSI + PLL) | HAL, CMSIS, SEGGER RTT, EasyLogger, FreeRTOS, SystemView, Keil MDK | RTOS task tracing with SystemView, RTT logging, PC13 status LED, and USART1 initialization |
 | [STM32F411CEU6 SPL](STM32F411CEU6_SPL/README.md) | Cortex-M4F, 16 MHz HSI | SPL, CMSIS, Keil MDK | Minimal project verified on hardware |
 | [STM32F411CEU6 SPL + RTT + EasyLogger](STM32F411CEU6_SPL_SEGGER_RTT_EasyLogger/README.md) | Cortex-M4F, 16 MHz HSI | SPL, CMSIS, SEGGER RTT, EasyLogger, Keil MDK | Hardware-verified real-time logging over RTT |
 | [STM32F411CEU6 HAL Typical Product Development Standard](STM32F411CEU6_HAL_Typical_Product_Development_Standard/README.md) | Cortex-M4F, 16 MHz HSI | HAL, CMSIS, Keil MDK | Base firmware and a typical product development directory structure |
@@ -37,7 +38,7 @@ This repository collects embedded chip project templates used for everyday learn
 
 ## Directory Conventions
 
-STM32 directory names follow `Device_Library[_SEGGER_RTT][_EasyLogger][_FreeRTOS][_CmBacktrace]`, listing only integrated components. An omitted OS suffix indicates bare-metal firmware. The `Typical_Product_Development_Standard` suffix identifies the complete directory layout organized for typical product development.
+STM32 directory names follow `Device_Library[_SEGGER_RTT][_EasyLogger][_FreeRTOS][_CmBacktrace][_SystemView]`, listing only integrated components. An omitted OS suffix indicates bare-metal firmware. The `Typical_Product_Development_Standard` suffix identifies the complete directory layout organized for typical product development.
 
 The standard STM32 templates organize code under `Users`, `Drivers`, `Projects`, and `Output`. The HAL + RTT series uses a CubeMX layout with `Core`, `Drivers`, `MDK-ARM`, and `Middlewares_User`; its FreeRTOS variants also include `Middlewares`, `Z01_BSP` for board drivers, and `Z02_Business` for application tasks. The full project folder template also provides categories for project management, hardware, software, mechanical design, testing, and tools. The ESP32-S3 project follows the ESP-IDF layout with a root CMake configuration, `sdkconfig`, and a `main` component. Future platforms may follow their official or team-specific structures and do not need to use a single forced layout.
 
