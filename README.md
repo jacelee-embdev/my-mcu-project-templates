@@ -11,17 +11,20 @@ This repository collects embedded chip project templates used for everyday learn
 | Project | Platform and configuration | Framework / tools | Current contents |
 |---|---|---|---|
 | [ESP32-S3](ESP32_S3/) | Xtensa, 240 MHz, 16 MB flash | ESP-IDF, CMake | Empty `app_main()` and custom partition table |
-| [STM32F103C8T6](STM32F103C8T6_Template/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | PA4 LED and USART1 communication |
-| [STM32F103RCT6](STM32F103RCT6_Template/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | USART1 communication |
-| [STM32F103ZET6](STM32F103ZET6_Template/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | USART1 communication |
-| [STM32F411CEU6](STM32F411CEU6_Template/README.md) | Cortex-M4F, 16 MHz HSI | HAL, CMSIS, Keil MDK | USART1 communication |
-| [STM32F411CEU6 SPL](STM32F411CEU6_SPL_Template/README.md) | Cortex-M4F, 16 MHz HSI | SPL, CMSIS, Keil MDK | Minimal project verified on hardware |
-| [STM32F411CEU6 SPL with EasyLogger and SEGGER RTT](STM32F411CEU6_SPL_Template_EasyLogger_SEGGER_RTT/README.md) | Cortex-M4F, 16 MHz HSI | SPL, CMSIS, EasyLogger, SEGGER RTT, Keil MDK | Hardware-verified real-time logging over RTT |
-| [STM32F411CEU6 Full Project Folder](STM32F411CEU6_EmbeddedProject_Folder_Template/README.md) | Cortex-M4F, 16 MHz HSI | HAL, CMSIS, Keil MDK | Base firmware and a complete project structure |
+| [STM32F103C8T6 HAL](STM32F103C8T6_HAL/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | PA4 LED and USART1 communication |
+| [STM32F103RCT6 HAL](STM32F103RCT6_HAL/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | USART1 communication |
+| [STM32F103ZET6 HAL](STM32F103ZET6_HAL/README.md) | Cortex-M3, 72 MHz | HAL, CMSIS, Keil MDK | USART1 communication |
+| [STM32F411CEU6 HAL](STM32F411CEU6_HAL/README.md) | Cortex-M4F, 16 MHz HSI | HAL, CMSIS, Keil MDK | USART1 communication |
+| [STM32F411CEU6 HAL + RTT + EasyLogger](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger/README.md) | Cortex-M4F, 100 MHz (HSI + PLL) | HAL, CMSIS, SEGGER RTT, EasyLogger, Keil MDK | Bare-metal logging and USART1 initialization |
+| [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS/README.md) | Cortex-M4F, 100 MHz (HSI + PLL) | HAL, CMSIS, SEGGER RTT, EasyLogger, FreeRTOS, Keil MDK | Centralized task creation, PC13 status LED, logging, and USART1 initialization |
+| [STM32F411CEU6 HAL + RTT + EasyLogger + FreeRTOS + CmBacktrace](STM32F411CEU6_HAL_SEGGER_RTT_EasyLogger_FreeRTOS_CmBacktrace/README.md) | Cortex-M4F, 100 MHz (HSI + PLL) | HAL, CMSIS, SEGGER RTT, EasyLogger, FreeRTOS, CmBacktrace, Keil MDK | RTOS logging, USART1 initialization, and HardFault / task stack diagnostics |
+| [STM32F411CEU6 SPL](STM32F411CEU6_SPL/README.md) | Cortex-M4F, 16 MHz HSI | SPL, CMSIS, Keil MDK | Minimal project verified on hardware |
+| [STM32F411CEU6 SPL + RTT + EasyLogger](STM32F411CEU6_SPL_SEGGER_RTT_EasyLogger/README.md) | Cortex-M4F, 16 MHz HSI | SPL, CMSIS, SEGGER RTT, EasyLogger, Keil MDK | Hardware-verified real-time logging over RTT |
+| [STM32F411CEU6 HAL Typical Product Development Standard](STM32F411CEU6_HAL_Typical_Product_Development_Standard/README.md) | Cortex-M4F, 16 MHz HSI | HAL, CMSIS, Keil MDK | Base firmware and a typical product development directory structure |
 
 ## Development Environments
 
-- The STM32 projects use Keil MDK 5, ARM Compiler 5, the STM32 HAL library, and CMSIS for building, with SWD for programming and debugging.
+- The STM32 projects use Keil MDK 5, ARM Compiler 5, STM32 HAL or SPL, and CMSIS for building, with SWD for programming and debugging.
 - The ESP32-S3 project uses ESP-IDF and CMake. Its project configuration is stored in `sdkconfig`, and its application entry point is in `main/main.c`.
 - Each platform retains its native project layout and build workflow. Refer to the documentation and project files in the corresponding directory for exact settings.
 
@@ -34,7 +37,9 @@ This repository collects embedded chip project templates used for everyday learn
 
 ## Directory Conventions
 
-The standard STM32 templates organize code under `Users`, `Drivers`, `Projects`, and `Output`. The full project folder template also provides categories for project management, hardware, software, mechanical design, testing, and tools. The ESP32-S3 project follows the ESP-IDF layout with a root CMake configuration, `sdkconfig`, and a `main` component. Future platforms may follow their official or team-specific structures and do not need to use a single forced layout.
+STM32 directory names follow `Device_Library[_SEGGER_RTT][_EasyLogger][_FreeRTOS][_CmBacktrace]`, listing only integrated components. An omitted OS suffix indicates bare-metal firmware. The `Typical_Product_Development_Standard` suffix identifies the complete directory layout organized for typical product development.
+
+The standard STM32 templates organize code under `Users`, `Drivers`, `Projects`, and `Output`. The HAL + RTT series uses a CubeMX layout with `Core`, `Drivers`, `MDK-ARM`, and `Middlewares_User`; its FreeRTOS variants also include `Middlewares`, `Z01_BSP` for board drivers, and `Z02_Business` for application tasks. The full project folder template also provides categories for project management, hardware, software, mechanical design, testing, and tools. The ESP32-S3 project follows the ESP-IDF layout with a root CMake configuration, `sdkconfig`, and a `main` component. Future platforms may follow their official or team-specific structures and do not need to use a single forced layout.
 
 ## Notes
 
