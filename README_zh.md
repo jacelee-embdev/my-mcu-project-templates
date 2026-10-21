@@ -1,5 +1,7 @@
 **简体中文** | [English](README.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # 嵌入式工程模板合集
 
 ## 项目简介
@@ -50,4 +52,4 @@ STM32 常规模板使用 `Users`、`Drivers`、`Projects` 和 `Output` 组织代
 
 ## 许可证
 
-本项目采用 [MIT License](LICENSE)。
+本项目采用 **MIT License** 开源许可证。Copyright (c) 2026 JesMicro。完整条款请参阅根目录的 [LICENSE](LICENSE) 文件。第三方组件遵循各自的许可证。

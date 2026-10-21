@@ -1,5 +1,7 @@
 **简体中文** | [English](README.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL + SEGGER RTT + EasyLogger + FreeRTOS
 
 本工程是集成 HAL、SEGGER RTT、EasyLogger 和 FreeRTOS 的 STM32F411CEU6 模板，提供外设初始化、统一任务创建入口及基础状态任务，适合需要任务调度和日志输出的项目。
@@ -20,4 +22,6 @@
 
 CubeMX 重新生成代码后，保留 TIM1 时基、`OS_Init()`、日志初始化及 RTT 重定向，继续禁用默认任务，并核对分组和头文件路径。增加并发日志输出前，应检查同步机制。
 
-项目条款见 [LICENSE](LICENSE)，第三方组件遵循各自许可证。
+## 许可证
+
+本项目采用 **MIT License** 开源许可证。Copyright (c) 2026 JesMicro。完整条款请参阅根目录的 [LICENSE](LICENSE) 文件。第三方组件遵循各自的许可证。

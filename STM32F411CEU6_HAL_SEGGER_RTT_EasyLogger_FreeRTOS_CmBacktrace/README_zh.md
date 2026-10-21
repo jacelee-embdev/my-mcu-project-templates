@@ -1,5 +1,7 @@
 **简体中文** | [English](README.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL + SEGGER RTT + EasyLogger + FreeRTOS + CmBacktrace
 
 本工程在 HAL、RTT、EasyLogger 和 FreeRTOS 基础上集成 CmBacktrace，提供 HardFault 诊断与任务栈回溯能力，可作为需要运行故障分析的 STM32F411CEU6 项目起点。
@@ -20,4 +22,6 @@
 
 CubeMX 重新生成代码前，备份 FreeRTOS 目录；生成后保留 TIM1 时基、`OS_Init()`、日志初始化及 RTT 重定向，继续禁用默认任务。`HardFault_Handler()` 由 `cmb_fault.S` 提供，生成的同名 C 实现须保持禁用。保留 FreeRTOS `Source/tasks.c` 和 `Source/include/FreeRTOS.h` 中的 CmBacktrace 适配；升级内核时应重新核对并移植这些修改。
 
-项目条款见 [LICENSE](LICENSE)，第三方组件遵循各自许可证。
+## 许可证
+
+本项目采用 **MIT License** 开源许可证。Copyright (c) 2026 JesMicro。完整条款请参阅根目录的 [LICENSE](LICENSE) 文件。第三方组件遵循各自的许可证。

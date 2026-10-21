@@ -24,4 +24,4 @@ Customize trace descriptions and frequency settings in `Middlewares_User/SystemV
 
 ## License
 
-This project is licensed under the **MIT License**.Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the repository root for the full license text.
+This project is licensed under the **MIT License**. Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the project root for the full license text. Third-party components are subject to their respective licenses.

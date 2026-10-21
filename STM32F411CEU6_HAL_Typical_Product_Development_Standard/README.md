@@ -1,5 +1,7 @@
 **English** | [简体中文](README_zh.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL Typical Product Development Standard
 
 ## Overview
@@ -21,3 +23,7 @@ Open `03_Firmware/01_APP/STM32F411CEU6/07_Projects/MDK-ARM/STM32F411CEU6.uvprojx
 - `03_Firmware`: application and bootloader firmware
 - `04_Software`: companion software
 - `05_Mechanical`, `06_FCT`, and `07_Tools`: mechanical, test, and tool resources
+
+## License
+
+This project is licensed under the **MIT License**. Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the project root for the full license text. Third-party components are subject to their respective licenses.

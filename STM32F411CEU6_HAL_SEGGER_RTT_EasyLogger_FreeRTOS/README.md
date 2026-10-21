@@ -1,5 +1,7 @@
 **English** | [简体中文](README_zh.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL + SEGGER RTT + EasyLogger + FreeRTOS
 
 A reusable STM32F411CEU6 firmware template combining STM32 HAL, SEGGER RTT, EasyLogger, and FreeRTOS. It provides peripheral initialization, centralized task creation, and a small status task as a starting point for applications that need scheduling and structured debug output.
@@ -20,4 +22,6 @@ Create tasks and RTOS resources in `Z02_Business/Init/os_init.c` through `OS_Ini
 
 After CubeMX regeneration, retain the TIM1 time base, `OS_Init()` call, logging setup, and RTT redirection. Keep the generated default task disabled and review source groups and include paths. Review logging synchronization before adding concurrent writers.
 
-See [LICENSE](LICENSE) for project terms. Third-party components retain their respective licenses.
+## License
+
+This project is licensed under the **MIT License**. Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the project root for the full license text. Third-party components are subject to their respective licenses.

@@ -1,5 +1,7 @@
 **English** | [简体中文](README_zh.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL + SEGGER RTT + EasyLogger + FreeRTOS + CmBacktrace
 
 A reusable STM32F411CEU6 firmware template combining HAL peripherals, RTT logging, FreeRTOS scheduling, and CmBacktrace fault diagnostics. It extends the logging and RTOS foundation with a HardFault entry point and task stack information, providing a starting point for applications that need runtime fault analysis.
@@ -20,4 +22,6 @@ Create application tasks in `Z02_Business/Init/os_init.c` through `OS_Init()`. B
 
 Before CubeMX regeneration, back up the FreeRTOS directory. Afterwards, preserve TIM1, the `OS_Init()` call, logging initialization, and RTT redirection; keep the default task disabled. The generated `HardFault_Handler()` must remain disabled because `cmb_fault.S` supplies the entry point. Preserve CmBacktrace adaptations in FreeRTOS `Source/tasks.c` and `Source/include/FreeRTOS.h`; review and reapply them when upgrading the kernel.
 
-See [LICENSE](LICENSE) for project terms. Third-party components retain their respective licenses.
+## License
+
+This project is licensed under the **MIT License**. Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the project root for the full license text. Third-party components are subject to their respective licenses.

@@ -55,6 +55,4 @@ STM32F411CEU6_SPL
 
 ## 许可证
 
-本项目采用 [MIT License](LICENSE)。
-
-Copyright (c) 2026 JesMicro
+本项目采用 **MIT License** 开源许可证。Copyright (c) 2026 JesMicro。完整条款请参阅根目录的 [LICENSE](LICENSE) 文件。第三方组件遵循各自的许可证。

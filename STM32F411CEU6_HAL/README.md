@@ -1,5 +1,7 @@
 **English** | [简体中文](README_zh.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL
 
 ## Overview
@@ -20,3 +22,7 @@ Open `Projects/MDK-ARM/STM32F411CEU6.uvprojx` with Keil MDK 5 (ARM Compiler 5), 
 - `Drivers`: HAL, CMSIS, and system drivers
 - `Projects`: Keil project files
 - `Output`: build artifacts
+
+## License
+
+This project is licensed under the **MIT License**. Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the project root for the full license text. Third-party components are subject to their respective licenses.

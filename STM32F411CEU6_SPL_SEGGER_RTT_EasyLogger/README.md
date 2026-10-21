@@ -61,6 +61,4 @@ EasyLogger is connected to SEGGER RTT Terminal 0 through its port layer.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
-Copyright (c) 2026 JesMicro
+This project is licensed under the **MIT License**. Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the project root for the full license text. Third-party components are subject to their respective licenses.

@@ -1,5 +1,7 @@
 **简体中文** | [English](README.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL 典型产品开发规范
 
 ## 简介
@@ -21,3 +23,7 @@
 - `03_Firmware`：应用与 Bootloader
 - `04_Software`：配套软件
 - `05_Mechanical`、`06_FCT`、`07_Tools`：结构、测试与工具
+
+## 许可证
+
+本项目采用 **MIT License** 开源许可证。Copyright (c) 2026 JesMicro。完整条款请参阅根目录的 [LICENSE](LICENSE) 文件。第三方组件遵循各自的许可证。

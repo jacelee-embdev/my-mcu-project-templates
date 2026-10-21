@@ -1,5 +1,7 @@
 **English** | [简体中文](README_zh.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # Embedded Project Template Collection
 
 ## Overview
@@ -50,4 +52,4 @@ The standard STM32 templates organize code under `Users`, `Drivers`, `Projects`,
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+This project is licensed under the **MIT License**. Copyright (c) 2026 JesMicro. See the [LICENSE](LICENSE) file in the project root for the full license text. Third-party components are subject to their respective licenses.

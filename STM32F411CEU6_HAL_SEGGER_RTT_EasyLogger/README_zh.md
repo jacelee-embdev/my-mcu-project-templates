@@ -1,5 +1,7 @@
 **简体中文** | [English](README.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # STM32F411CEU6 HAL + SEGGER RTT + EasyLogger
 
 本工程是可直接复用的 STM32F411CEU6 裸机模板，集成 HAL 外设初始化、SEGGER RTT 调试输出与 EasyLogger 日志，保留 CubeMX 配置和 Keil 工程，便于在现有基础上扩展驱动和业务代码。
@@ -20,4 +22,6 @@
 
 更换硬件前，请检查 `STM32F411CEU6.ioc` 中的时钟与引脚。CubeMX 重新生成代码后，核对中间件分组、头文件路径和用户代码。后续接入 RTOS 时，应调整 HAL 时基并适配日志同步机制。
 
-项目条款见 [LICENSE](LICENSE)，第三方组件遵循各自许可证。
+## 许可证
+
+本项目采用 **MIT License** 开源许可证。Copyright (c) 2026 JesMicro。完整条款请参阅根目录的 [LICENSE](LICENSE) 文件。第三方组件遵循各自的许可证。
